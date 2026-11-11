@@ -1,0 +1,13 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "RADIO VIBRATION INTER 107.3 FM",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "VIBRATION INTER",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "id": "radio-vibration-inter-1073",
+  "description": "Radio Vibration Inter 107.3 FM - Live Radio Haiti"
+}
