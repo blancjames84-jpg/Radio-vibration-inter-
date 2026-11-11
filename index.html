@@ -1,77 +1,93 @@
 
+
 <!DOCTYPE html>
 <html lang="ht">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RADIO VIBRATION INTER 107.3 FM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radio Vibration Inter 107.3 FM</title>
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #073b80;
-  color: white;
-  text-align: center;
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#063779;
+ color:white;
+ text-align:center;
 }
-header {
-  background: #ffcc00;
-  color: #073b80;
-  padding: 25px 10px;
+header{
+ background:#ffcc00;
+ color:#063779;
+ padding:25px 10px;
 }
-h1 { font-size: 27px; }
-main { padding: 30px 15px; }
-.radio {
-  background: white;
-  color: #073b80;
-  border-radius: 20px;
-  padding: 25px 15px;
-  max-width: 400px;
-  margin: auto;
+.logo{
+ width:115px;height:115px;
+ border:5px solid white;
+ border-radius:50%;
+ background:#a31957;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ margin:auto;
+ font-size:35px;
+ font-weight:bold;
 }
-button {
-  background: #ffcc00;
-  color: #073b80;
-  border: none;
-  padding: 18px 35px;
-  border-radius: 40px;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 15px;
+h1{font-size:25px}
+main{padding:25px 15px}
+.card{
+ background:white;
+ color:#063779;
+ border-radius:22px;
+ padding:25px 15px;
+ max-width:430px;
+ margin:auto;
+ box-shadow:0 5px 18px #001b45;
 }
-footer {
-  padding: 25px;
-  font-size: 14px;
+.live{color:red;font-weight:bold}
+button{
+ background:#ffcc00;
+ color:#063779;
+ border:0;
+ padding:17px 28px;
+ border-radius:35px;
+ font-size:18px;
+ font-weight:bold;
+ margin:15px 0;
 }
+audio{width:100%}
+footer{padding:25px;font-size:14px}
 </style>
 </head>
 <body>
-
 <header>
-<h1>📻 RADIO VIBRATION INTER</h1>
-<h2>107.3 FM</h2>
+ <div class="logo">VI</div>
+ <h1>RADIO VIBRATION INTER</h1>
+ <h2>107.3 FM</h2>
+ <p>LA RADIO QUI NOUS RASSEMBLE</p>
 </header>
-
 <main>
-<div class="radio">
-<h2>Byenveni sou Radio Vibration Inter</h2>
-<p>Bon mizik, bon enfòmasyon!</p>
-<p>🔴 NOU AN DIRÈK</p>
-<button onclick="ecoute()">▶ KOUTE AN DIRÈK</button>
-<audio id="radio" controls></audio>
-<p>RADIO VIBRATION INTER 107.3 FM</p>
-</div>
+ <div class="card">
+  <h2>Byenveni sou radyo nou!</h2>
+  <p class="live">🔴 RADIO VIBRATION INTER</p>
+  <h3>Nou pote mizik ak enfòmasyon pou ou.</h3>
+  <button onclick="joue()">▶ KOUTE AN DIRÈK</button>
+  <audio id="player" controls></audio>
+  <p>107.3 FM — Vibration Inter</p>
+ </div>
 </main>
-
 <footer>
-<p>© 2026 RADIO VIBRATION INTER</p>
-<p>Mèsi paske w ap koute nou!</p>
+ <p>RADIO VIBRATION INTER 107.3 FM</p>
+ <p>Mèsi paske w ap koute nou!</p>
 </footer>
-
 <script>
-function ecoute() {
-  alert("N ap prepare koneksyon radyo a. Byento n ap an dirèk!");
+function joue(){
+ const p=document.getElementById('player');
+ if(!p.src){
+  alert("Nou bezwen adrès transmisyon radyo a pou konekte an dirèk.");
+  return;
+ }
+ p.play();
 }
 </script>
-
 </body>
 </html>
