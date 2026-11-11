@@ -93,5 +93,38 @@ function joue(){
  p.play();
 }
 </script>
-</body>
+</body><a href="#" id="installBtn" style="
+display:block;
+background:#ffcc00;
+color:#003399;
+padding:15px;
+margin:20px auto;
+text-align:center;
+font-weight:bold;
+border-radius:12px;
+text-decoration:none;
+">
+📲 TÉLÉCHARGER L’APPLICATION
+</a>
+
+<script>
+let deferredPrompt;
+const btn = document.getElementById('installBtn');
+btn.style.display = 'none';
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  btn.style.display = 'block';
+});
+
+btn.addEventListener('click', async () => {
+  if (!deferredPrompt) {
+    alert("Ouvri meni Chrome a epi chwazi Installer l’application.");
+    return;
+  }
+  deferredPrompt.prompt();
+  deferredPrompt = null;
+});
+</script>
 </html>
